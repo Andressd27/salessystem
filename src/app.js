@@ -8,7 +8,10 @@ const app = express();
 // setear un puerto a mi web server
 app.set("port", 5000);
 
-app.use(cors);
+// middleware
+app.use(express.json());
+
+app.use(cors());
 // routes
 app.use("/api/categorias",categoriasRoutes);
 

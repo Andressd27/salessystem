@@ -21,5 +21,9 @@ app.use("/api/empleados",empleadosRoutes);
 app.use("/api/clientes",clientesRoutes);
 app.use("/api/productos",productosRoutes);
 
+app.get('/',(req,res)=>{
+    res.send('REST API EN RENDER WITHOUT DATABASE ENDPOINT');
+})
+
 //hacemos disponible a mi server app para toda la aplicacion
 export default app;

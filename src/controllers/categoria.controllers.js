@@ -6,6 +6,8 @@ const getCategorias = async (req, res) => {
         const result = await connection.query("SELECT CategoriaID, CategoriaNombre, Descripcion, Imagen FROM categorias");
         res.json(result);
     } catch (error) {
+        console.log("error",error);
+        
         console.error("Not possible connection database");
     }
 }
